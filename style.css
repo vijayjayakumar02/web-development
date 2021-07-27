@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    /* height: 100%; */
+    overflow: hidden;
+    background-image: url(images/bg-image2.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter:  blur(3px);
+}
+.container{
+    min-height: 100%;
+    position: relative;
+    height: 100%;
+}
+header{
+    background-color: #115EA2;
+    margin-top: -30px;
+    height: 100px;
+    /* width: 100; */
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.head{
+    text-align: center;
+    font-size: 44px;
+    left: 0px;
+    top: 20px;
+    color: wheat;
+    font-family: Sans-serif;
+    float:left;
+    margin-top:35px;
+    margin-left:30px;
+    text-decoration:none;
+}
+
+ul.navbar li{
+    float: right; 
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+ul.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.navbar li a:hover{
+    color: black;
+}
+
+article{
+    width: 60%;
+    background-color: grey;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 0;
+}
+section{
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+}
+.text-news{
+    font-size: 1.5rem;
+}
+aside{
+    float: right;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(228, 160, 70);
+    height: 400px;
+    margin-top: -400px;
+    margin-right: 30px;
+}
+.nav-aside{
+    margin-top: 50px;
+}
+aside a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    color: white;
+    font-size: 1.5rem;
+}
+aside a:hover{
+    color: black;
+}
+h2{
+    text-align: center;
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
