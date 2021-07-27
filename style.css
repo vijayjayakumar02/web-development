@@ -69,6 +69,7 @@ article{
     height: 400px;
     margin-top: 20px;
     margin-left: 20px;
+    border-radius: 11px;
     margin-right: 0;
 }
 section{
@@ -86,6 +87,7 @@ aside{
     text-align: center;
     background-color: rgb(228, 160, 70);
     height: 400px;
+    border-radius: 10px;
     margin-top: -400px;
     margin-right: 30px;
 }
