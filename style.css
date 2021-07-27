@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -11,6 +12,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter:  blur(3px);
+    font-family: 'Montserrat',sans-serif;
 }
 .container{
     min-height: 100%;
