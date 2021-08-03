@@ -64,7 +64,7 @@ body{
   max-height: 250px;
   overflow-y: auto;
 }
-.Todolist{
+#Todolist{
   position: relative;
   list-style: none;
   height: 90px;
@@ -78,7 +78,7 @@ body{
 footer{
   padding-top: 18px;
 }
-footer .count-btn{
+footer #count{
   margin-left: 5px;
   width: 90px;
   text-align: center;
