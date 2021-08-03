@@ -1,28 +1,31 @@
 const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
+const pendingTasks = document.querySelector(".pendingTasks");
 const deleteBtn = document.querySelector(".footer button");
 
 inputBox.onkeyup = () => {
-  let userValue = inputBox.value;
+  let userValue = inputBox.value;//getting the value entered by the user
   console.log(userValue);
   if (userValue.trim() != 0) {
-    addBtn.classList.add("active");
+    addBtn.classList.add("active");//The add button is active if user enters a value 
   } else {
     addBtn.classList.remove("active");
   }
 };
-showTask();
+showTask(); // calling show task function 
+
+//onclick function to add button
 addBtn.onclick = () => {
   let userEnteredValue = inputBox.value;
   let getLocalStorage = localStorage.getItem("new todo");
   if (userEnteredValue == 0) {
-    window.alert("Todo list is empty");
+    window.alert("Todo list is empty");//if the user value is empty browser shows the alert pop-up
   } else if (getLocalStorage == null) {
-    listArray = [];
-  } else if (userEnteredValue != 0) {
+    listArray = [];//if storage is null then the array will be empty  
+  } else if (userEnteredValue != 0) { // if not then the value is pushed to array
     listArray.push(userEnteredValue);
-    localStorage.setItem("new todo", JSON.stringify(listArray));
+    localStorage.setItem("new todo", JSON.stringify(listArray));//javascript value to json
     showTask();
     addBtn.classList.remove("active");
   } else {
@@ -36,8 +39,7 @@ function showTask() {
   } else {
     listArray = JSON.parse(getLocalStorage);
   }
-  const pendingTasks = document.querySelector(".pendingTasks");
-  pendingTasks.textContent = listArray.length;
+  pendingTasks.textContent = listArray.length; // returns the length of the arrayList
   if (listArray.length < 0) {
     deleteBtn.classList.add("active");
   } else {
