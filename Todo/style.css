@@ -63,9 +63,12 @@ body {
   transition: all 0.3s ease;
 }
 .inputField button:hover {
-  background: rgb(4, 44, 71);
+  background: rgb(25, 92, 136);
 }
-
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 .container .todoList {
   max-height: 250px;
   color: black;
@@ -88,7 +91,7 @@ body {
 .todoList li .icon {
   position: absolute;
   right: -45px;
-  background: #e22f1b;
+  background: #e74c3c;
   width: 45px;
   text-align: center;
   color: #fff;
@@ -126,7 +129,10 @@ body {
   color: black;
   font-weight: 900;
 }
-
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 ::selection {
   color: #ffff;
   background: rgb(135, 117, 214);

@@ -3,6 +3,15 @@ const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteBtn = document.querySelector(".footer button");
 
+inputBox.onkeyup = () => {
+  let userValue = inputBox.value;
+  console.log(userValue);
+  if (userValue.trim() != 0) {
+    addBtn.classList.add("active");
+  } else {
+    addBtn.classList.remove("active");
+  }
+};
 showTask();
 addBtn.onclick = () => {
   let userEnteredValue = inputBox.value;
@@ -15,6 +24,7 @@ addBtn.onclick = () => {
     listArray.push(userEnteredValue);
     localStorage.setItem("new todo", JSON.stringify(listArray));
     showTask();
+    addBtn.classList.remove("active");
   } else {
     listArray = JSON.parse(getLocalStorage);
   }
@@ -28,6 +38,11 @@ function showTask() {
   }
   const pendingTasks = document.querySelector(".pendingTasks");
   pendingTasks.textContent = listArray.length;
+  if (listArray.length < 0) {
+    deleteBtn.classList.add("active");
+  } else {
+    deleteBtn.classList.remove("active");
+  }
   let newListTag = "";
   listArray.forEach((element, index) => {
     newListTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
