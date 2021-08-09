@@ -1,24 +1,24 @@
 const signUp = (e) => {
-  let formData = JSON.parse(localStorage.getItem("formData")) || [];
+  let formData = JSON.parse(sessionStorage.getItem("formData")) || [];
   let exist =
     formData.length &&
-    JSON.parse(localStorage.getItem("formData")).some(
+    JSON.parse(sessionStorage.getItem("formData")).some(
       (data) =>
         data.fname.toLowerCase() ==
           document.getElementById("fname").value.toLowerCase() &&
         data.lname.toLowerCase() ==
           document.getElementById("lname").value.toLowerCase()
     );
-  if (!exist) {
+  if (!exist && error_fname != false) {
     formData.push({
       fname: document.getElementById("fname").value,
       lname: document.getElementById("lname").value,
       email: document.getElementById("email").value,
       pwd: document.getElementById("password").value,
-      dept: document.getElementById("dept").value
+      dept: document.getElementById("dept").value,
     });
-    localStorage.setItem("formData", JSON.stringify(formData));
-    console.log(localStorage.getItem("formData"));
+    sessionStorage.setItem("formData", JSON.stringify(formData));
+    console.log(sessionStorage.getItem("formData"));
     disdata();
     document.querySelector("form").reset();
     document.getElementById("fname").focus();
@@ -28,21 +28,21 @@ const signUp = (e) => {
   e.preventDefault();
 };
 function disdata() {
-  console.log(localStorage.getItem("formData"));
-  if (localStorage.getItem("formData")) {
+  console.log(sessionStorage.getItem("formData"));
+  if (sessionStorage.getItem("formData")) {
     var output = document.querySelector("tbody");
     output.innerHTML = " ";
-    JSON.parse(localStorage.getItem("formData")).forEach((data, index) => {
+    JSON.parse(sessionStorage.getItem("formData")).forEach((data, index) => {
+      data.fname = "Invalid";
       output.innerHTML += `
-                <tr>
-                    <td>${data.fname}</td>
-                    <td>${data.lname}</td>
-                    <td>${data.email}</td>
-                    <td>${data.pwd}</td>
-                    <td>${data.dept}</td>
-                    <span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span>
-                </tr>
-                
+          <tr>
+              <td>${data.fname}</td>
+              <td>${data.lname}</td>
+              <td>${data.email}</td>
+              <td>${data.pwd}</td>
+              <td>${data.dept}</td>
+              <span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span>
+          </tr>     
         `;
     });
   }

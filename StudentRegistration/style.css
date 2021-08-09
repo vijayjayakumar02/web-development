@@ -116,6 +116,7 @@ form .button input:hover {
   opacity: 0.9;
   cursor: pointer;
 }
+
 @media (max-width: 584px) {
   .container {
     max-width: 100%;

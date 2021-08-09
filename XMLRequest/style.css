@@ -18,15 +18,15 @@ body {
   padding: 25px 25px;
   border-radius: 6px;
 }
-.form-group {
+/* .form-group {
   margin: 10px;
-}
-input {
+} */
+/* input {
   width: 100%;
   border: solid 1px #eee;
   padding: 15px 10px;
-}
-button {
+} */
+/* button {
   width: 200px;
   padding: 15px;
   margin-left: 250px;
@@ -39,12 +39,11 @@ button {
 button:hover {
   background: dodgerblue;
   color: #fff;
-}
+} */
 table tr td {
   border: solid 1px #eee;
   padding: 10px;
 }
-table tbody tr .icon {
-  width: 45px;
-  background-color: rebeccapurple;
+img {
+  cursor: pointer;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <title>Student Form</title>
   </head>
   <body>
@@ -22,6 +23,7 @@
               required
             />
           </div>
+          <span class="error_form" id="fname_error_message"></span>
           <div class="input-box">
             <span class="details">Last Name</span>
             <input
@@ -32,19 +34,27 @@
               required
             />
           </div>
+          <span class="error_form" id="lname_error_message"></span>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your Email" required />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
           </div>
           <div class="input-box">
             <span class="details">Username</span>
             <input
               type="text"
-              name="email"
-              id="email"
+              name="username"
+              id="username"
               placeholder="Enter your username..."
               required
             />
+            <span class="error_form" id="email_error_message"></span>
           </div>
           <div class="input-box">
             <span class="details">Department</span>
@@ -65,6 +75,7 @@
               placeholder="Enter your password..."
               required
             />
+            <span class="error_form" id="password_error_message"></span>
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
@@ -102,6 +113,7 @@
         </div>
       </form>
     </div>
+    <script src="validation.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
